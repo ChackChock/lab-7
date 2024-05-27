@@ -4,7 +4,8 @@ import telebot
 
 bot = telebot.TeleBot("5383955971:AAFz8yVLVXrO5A1MOwM0dA-U9Ym_rb3Q6kM")
 
-
+# commit 1: 1 line
+# commit 1: 2 line
 questions = [
     "Столица России?",
     "Самое большое озеро в мире?",
@@ -21,6 +22,7 @@ current_question = 0
 money = 100
 
 
+# commit 1: 3 line
 @bot.message_handler(commands=["start"])
 def process_start_command(message: Message):
     answers_copy = answers[current_question].copy()
@@ -32,6 +34,7 @@ def process_start_command(message: Message):
     )
 
 
+# commit 1: 4 line
 @bot.message_handler()
 def process_message(message: Message):
     global current_question, money
