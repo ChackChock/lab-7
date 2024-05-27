@@ -18,9 +18,9 @@ answers = [
     ["Футбол", "Гольф", "Хоккей", "Бадминтон"],
     ["Метод", "Переменная", "Свойство", "Поле"],
 ]
+# commit 2: 1 line
 current_question = 0
 money = 100
-
 
 # commit 1: 3 line
 @bot.message_handler(commands=["start"])
@@ -33,8 +33,8 @@ def process_start_command(message: Message):
         "Вас приветствует бот-викторина!\nВот ваш первый вопрос:\n\n" + msg,
     )
 
-
 # commit 1: 4 line
+# commit 2: 2 line
 @bot.message_handler()
 def process_message(message: Message):
     global current_question, money
@@ -58,4 +58,5 @@ def process_message(message: Message):
         bot.send_message(message.from_user.id, msg)
 
 
+# commit 2: 3 line
 bot.polling(none_stop=True, interval=0)
