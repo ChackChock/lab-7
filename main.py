@@ -33,7 +33,7 @@ def process_start_command(message: Message):
         "Вас приветствует бот-викторина!\nВот ваш первый вопрос:\n\n" + msg,
     )
 
-# commit 4: 1 line
+# commit 4: 1 line commit 5: 1 line
 # commit 3: 2 line
 @bot.message_handler()
 def process_message(message: Message):
@@ -57,5 +57,6 @@ def process_message(message: Message):
         msg = questions[current_question] + "\n" + "\n".join(answers_copy)
         bot.send_message(message.from_user.id, msg)
 
-# commit 2: 3 line
+
+# commit 2: 3 line commit 5: 2 line
 bot.polling(none_stop=True, interval=0)
