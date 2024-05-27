@@ -12,13 +12,13 @@ questions = [
     "Самая популярный спорт в мире?",
     "Как называется переменная, принадлежащая классу?",
 ]
+# commit 8: 1 line
 answers = [
     ["Москва", "Египет", "Лондон", "Париж"],
     ["Каспийское море", "Виктория", "Гурон", "Байкал"],
     ["Футбол", "Гольф", "Хоккей", "Бадминтон"],
     ["Метод", "Переменная", "Свойство", "Поле"],
 ]
-# commit 2: 1 line
 current_question = 0
 money = 100
 
@@ -46,6 +46,7 @@ def process_message(message: Message):
         money /= 4
         bot.send_message(message.from_user.id, "Это неверный ответ!")
 
+    # commit 8: 2 line
     current_question += 1
     if current_question == len(questions):
         current_question = 0
