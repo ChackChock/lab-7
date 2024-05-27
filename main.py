@@ -33,12 +33,12 @@ def process_start_command(message: Message):
         "Вас приветствует бот-викторина!\nВот ваш первый вопрос:\n\n" + msg,
     )
 
+# commit 4: 1 line
 # commit 3: 2 line
-# commit 2: 2 line
 @bot.message_handler()
 def process_message(message: Message):
     global current_question, money
-
+    # commit 4: 2 line
     text = message.text.lower()
     if text == answers[current_question][0].lower():
         money *= 2
