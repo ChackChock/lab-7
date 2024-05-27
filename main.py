@@ -21,6 +21,7 @@ answers = [
 current_question = 0
 money = 100
 
+
 # commit 9: 3 line
 @bot.message_handler(commands=["start"])
 def process_start_command(message: Message):
@@ -31,6 +32,7 @@ def process_start_command(message: Message):
         message.from_user.id,
         "Вас приветствует бот-викторина!\nВот ваш первый вопрос:\n\n" + msg,
     )
+
 
 # commit 10: 1 line
 # commit 7: 1 line
@@ -57,6 +59,7 @@ def process_message(message: Message):
         shuffle(answers_copy)
         msg = questions[current_question] + "\n" + "\n".join(answers_copy)
         bot.send_message(message.from_user.id, msg)
+
 
 # commit 10: 3 line
 bot.polling(none_stop=True, interval=0)
