@@ -4,7 +4,7 @@ import telebot
 
 bot = telebot.TeleBot("5383955971:AAFz8yVLVXrO5A1MOwM0dA-U9Ym_rb3Q6kM")
 
-# commit 1: 1 line
+# commit 3: 1 line
 # commit 1: 2 line
 questions = [
     "Столица России?",
@@ -33,7 +33,7 @@ def process_start_command(message: Message):
         "Вас приветствует бот-викторина!\nВот ваш первый вопрос:\n\n" + msg,
     )
 
-# commit 1: 4 line
+# commit 3: 2 line
 # commit 2: 2 line
 @bot.message_handler()
 def process_message(message: Message):
@@ -56,7 +56,6 @@ def process_message(message: Message):
         shuffle(answers_copy)
         msg = questions[current_question] + "\n" + "\n".join(answers_copy)
         bot.send_message(message.from_user.id, msg)
-
 
 # commit 2: 3 line
 bot.polling(none_stop=True, interval=0)
